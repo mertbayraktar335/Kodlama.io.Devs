@@ -7,9 +7,9 @@ using FluentValidation;
 
 namespace Application.Features.ProgrammingLanguages.Command.UpdateProgrammingLanguage
 {
-    public class UpdateProgramminLanguageValidator : AbstractValidator<UpdateProgrammingLanguageCommand>
+    public class UpdateProgrammingLanguageValidator : AbstractValidator<UpdateProgrammingLanguageCommand>
     {
-        public UpdateProgramminLanguageValidator()
+        public UpdateProgrammingLanguageValidator()
         {
             RuleFor(c => c.Name).NotEmpty();
             RuleFor(c => c.Name).MinimumLength(1);
