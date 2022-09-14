@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Application.Features.ProgrammingLanguages.Command.CreateProgrammingLanguage;
 using Application.Features.ProgrammingLanguages.Dtos;
+
 using Application.Features.ProgrammingLanguages.Models;
 using AutoMapper;
 using Core.Persistence.Paging;
@@ -14,7 +15,7 @@ namespace Application.Features.ProgrammingLanguages.Profiles
 {
     public class MappingProfile : Profile
     {
-         public MappingProfile()
+        public MappingProfile()
         {
             CreateMap<ProgrammingLanguage, CreatedProgrammingLanguageDto>().ReverseMap();
             CreateMap<ProgrammingLanguage, CreateProgrammingLanguageCommand>().ReverseMap();
@@ -23,6 +24,7 @@ namespace Application.Features.ProgrammingLanguages.Profiles
             CreateMap<ProgrammingLanguage, DeletedProgrammingLanguageDto>().ReverseMap();
             CreateMap<ProgrammingLanguage, UpdatedProgrammingLanguageDto>().ReverseMap();
             CreateMap<IPaginate<ProgrammingLanguage>, ProgrammingLanguageListModel>().ReverseMap();
+
         }
     }
 }
